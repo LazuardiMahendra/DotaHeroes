@@ -1,6 +1,7 @@
 package com.example.dotaheroes
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dotaheroes.databinding.ActivityDetailBinding
 
@@ -22,6 +23,9 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Detail Hero "
+
         val name = intent.getStringExtra(EXTRA_NAME)
         val subtitle = intent.getStringExtra(EXTRA_SUBTITLE)
         val desc = intent.getStringExtra(EXTRA_DESC)
@@ -36,6 +40,9 @@ class DetailActivity : AppCompatActivity() {
             binding.ivAttackType.setImageResource(R.drawable.melee)
         }
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Detail Hero $name"
+
         binding.tvTitle.text = name
         binding.tvSubtitle.text = subtitle
         binding.tvDesc.text = desc
@@ -44,4 +51,16 @@ class DetailActivity : AppCompatActivity() {
         binding.ivPhoto.setImageResource(photo)
 
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            androidx.appcompat.R.id.home -> {
+                finish()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }

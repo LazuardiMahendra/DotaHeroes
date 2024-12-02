@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DotaHeroes</string>
+    <string name="app_name">Dota Heroes</string>
     <string name="heroes_name">Hero name\n</string>
     <string name="hero_description">Hero Description</string>
     <string name="txt_attack_type">Attack Type</string>
@@ -108,5 +108,6 @@
     </string-array>
 
     <string name="photo_url">https://media.licdn.com/dms/image/v2/D5635AQHYtzVKD-H5Ow/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1729663850962?e=1733742000&amp;v=beta&amp;t=6nNN7j0sETnr6cTRhDDwmob1YvCr6YTsfmykfWdyUCo</string>
+    <string name="txt_profile">Profile</string>
 
 </resources>
