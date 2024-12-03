@@ -49,13 +49,41 @@
             tools:text="@string/hero_description" />
 
         <TextView
+            android:id="@+id/textView"
+            style="@style/Text.Subtitle.Position"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_classes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <ImageView
+            android:id="@id/iv_classes"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:src="@drawable/ic_universal" />
+
+        <TextView
+            android:id="@+id/tv_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_classes"
+            app:layout_constraintStart_toEndOf="@+id/iv_classes"
+            app:layout_constraintTop_toTopOf="@+id/iv_classes"
+            tools:text="@string/txt_hero_classes" />
+
+        <TextView
             android:id="@+id/textView2"
             style="@style/Text.Subtitle.Position"
             android:layout_marginTop="10dp"
             android:text="@string/txt_attack_type"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_classes" />
 
         <ImageView
             android:id="@+id/iv_attack_type"

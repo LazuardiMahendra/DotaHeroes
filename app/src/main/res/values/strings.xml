@@ -72,9 +72,17 @@
 
     <string-array name="data_classes">
         <item>Universal</item>
-        <item>Strength</item>
+        <item>Strength </item>
         <item>Agility</item>
-        <item>Intelligence</item>
+        <item>Agility</item>
+        <item>Strength</item>
+        <item>Universal</item>
+        <item>Universal</item>
+        <item>Universal</item>
+        <item>Universal</item>
+        <item>Agility</item>
+        <item>Intelligence </item>
+        <item>Intelligence </item>
     </string-array>
 
     <string-array name="data_attack_type">
@@ -109,5 +117,7 @@
 
     <string name="photo_url">https://media.licdn.com/dms/image/v2/D5635AQHYtzVKD-H5Ow/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1729663850962?e=1733742000&amp;v=beta&amp;t=6nNN7j0sETnr6cTRhDDwmob1YvCr6YTsfmykfWdyUCo</string>
     <string name="txt_profile">Profile</string>
+    <string name="txt_classes">Classes</string>
+    <string name="txt_hero_classes">Hero Classes</string>
 
 </resources>

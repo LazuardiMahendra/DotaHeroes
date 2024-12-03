@@ -1,12 +1,11 @@
 package com.example.dotaheroes
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dotaheroes.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-    lateinit var binding: ActivityDetailBinding
+    private lateinit var binding: ActivityDetailBinding
 
     companion object {
         const val EXTRA_NAME = "extra_name"
@@ -40,6 +39,24 @@ class DetailActivity : AppCompatActivity() {
             binding.ivAttackType.setImageResource(R.drawable.melee)
         }
 
+        when (classes) {
+            "Universal" -> {
+                binding.ivClasses.setImageResource(R.drawable.ic_universal)
+            }
+
+            "Strength" -> {
+                binding.ivClasses.setImageResource(R.drawable.ic_strength)
+            }
+
+            "Agility" -> {
+                binding.ivClasses.setImageResource(R.drawable.ic_agility)
+            }
+
+            "Intelligence" -> {
+                binding.ivClasses.setImageResource(R.drawable.ic_intelligence)
+            }
+        }
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Detail Hero $name"
 
@@ -47,20 +64,9 @@ class DetailActivity : AppCompatActivity() {
         binding.tvSubtitle.text = subtitle
         binding.tvDesc.text = desc
         binding.tvAttackType.text = attackType
+        binding.tvClasses.text = classes
         binding.tvRoles.text = role
         binding.ivPhoto.setImageResource(photo)
 
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            androidx.appcompat.R.id.home -> {
-                finish()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
 }

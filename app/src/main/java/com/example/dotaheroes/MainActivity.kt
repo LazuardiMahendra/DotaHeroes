@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 dataName[i],
                 dataSubtitle[i],
                 dataDesc[i],
-                "test",
+                dataClasses[i],
                 dataRole[i],
                 dataAttackType[i],
                 dataPhoto.getResourceId(i, -1)
