@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
     private fun getListHeroes(): ArrayList<DataHeroes> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataSubtitle = resources.getStringArray(R.array.data_subtitle)

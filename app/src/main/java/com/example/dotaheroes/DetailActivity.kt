@@ -1,6 +1,9 @@
 package com.example.dotaheroes
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dotaheroes.databinding.ActivityDetailBinding
 
@@ -68,5 +71,26 @@ class DetailActivity : AppCompatActivity() {
         binding.tvRoles.text = role
         binding.ivPhoto.setImageResource(photo)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_detail, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_share -> {
+                val url = "https://www.dota2.com/hero/${
+                    intent.getStringExtra(EXTRA_NAME).toString().lowercase()
+                }"
+                val intent = Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TEXT, url)
+                }
+                startActivity(Intent.createChooser(intent, "Share via"))
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
