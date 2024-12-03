@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
     private fun getListHeroes(): ArrayList<DataHeroes> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataSubtitle = resources.getStringArray(R.array.data_subtitle)
@@ -68,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 dataName[i],
                 dataSubtitle[i],
                 dataDesc[i],
-                "test",
+                dataClasses[i],
                 dataRole[i],
                 dataAttackType[i],
                 dataPhoto.getResourceId(i, -1)
